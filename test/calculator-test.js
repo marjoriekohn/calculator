@@ -5,6 +5,7 @@ const fs = require('fs');
 const jquery = require('jquery');
 
 describe('Calculator Test', () => {
+    // declare global testing variables
     let dom;
     let $;
     let display;
@@ -15,7 +16,7 @@ describe('Calculator Test', () => {
     before(() => {
         const html = fs.readFileSync('./index.html', 'utf-8'); // read the contents of the index.html file
 
-        // these can be initialized AFTER the index.html file has been read ^
+        // variables are initialized AFTER the index.html file has been read ^
         dom = new JSDOM(html); // create a JSDOM instance using the HTML content
         $ = jquery(dom.window); // create a jQuery instance using the DOM window
         display = $('#display', dom.window.document); // reference the display
@@ -23,5 +24,16 @@ describe('Calculator Test', () => {
         equals = $('#equals', dom.window.document); // reference the equals button
     });
 
+    describe(' display.val(currentInput)', () => {
+        // Test #1
+        it('should display clicked button values', () => {
+            // 1.1 set-up - define the expected result
+            const expected = '123';
+            // 1.2 exercise - call the function being tested
 
+            // 1.3 verify the actual result with the expected result
+
+            // 1.4 teardown - if needed
+        });
+    })
 });

@@ -2,9 +2,9 @@ $(document).ready(function() { // event listener, waiting for DOM to load
     let display = $('#display'); // <input> has id="display", note: display is READ ONLY
     let currentInput = ''; // will be used to store user input
 
-    $('#buttons button').on('click', function() { //event listener to buttons, listens for a click
-        let buttonValue = $(this).text(); // retrieves the value of the button clicked
 
+    function buttonClicked() {
+        let buttonValue = $(this).text(); // retrieves the value of the button clicked
         if (buttonValue === 'C') { // if user pushed clear
             currentInput = ''; // resets currentInput
         } else {
@@ -12,9 +12,9 @@ $(document).ready(function() { // event listener, waiting for DOM to load
         }
 
         display.val(currentInput); // sets the display to the new current input
-    });
+    }
 
-    $('#equals').on('click', function() { // event listener for equal button
+    function equalsClicked() {
         try {
             let result = eval(currentInput); // evaluates the currentInput and stores it in 'result'
             display.val(result); // sets the display to the result
@@ -23,5 +23,7 @@ $(document).ready(function() { // event listener, waiting for DOM to load
             display.val('Error'); // show 'Error' on the display
             currentInput = ''; // reset currentInput
         }
-    });
+    }
+    $('#buttons button').on('click', buttonClicked); //event listener to buttons, listens for a click
+    $('#equals').on('click', equalsClicked); // event listener for equal button
 });
