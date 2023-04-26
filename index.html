@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>jQuery Calculator</title>
+
+    <!--  google fonts  -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./calculator.js"></script>
+
+    <!-- CSS -->
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+    <h1>jQulator</h1>
+</header>
+<main id="calculator">
+    <input type="text" id="display" readonly>
+    <div id="buttons">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="symbol">/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="symbol">*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="symbol">-</button>
+        <button>0</button>
+        <button>.</button>
+        <button class="clear">C</button>
+        <button class="symbol">+</button>
+    </div>
+    <button id="equals">=</button>
+</main>
+
+</body>
+</html>

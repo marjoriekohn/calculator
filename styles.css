@@ -1,0 +1,82 @@
+:root {
+    --headerfont: 'Rock Salt', Arial, sans-serif;
+    --bodyfont: 'Poppins', Arial, sans-serif;
+    --border: #121629;
+    --background: #232946;
+    --mainBackground: #b8c1ec;
+    --hover: #eebbc3;
+    --heading: #fffffe;
+}
+
+* {
+    margin: 0; /* reset margin and padding */
+    padding: 0;
+    box-sizing: border-box; /* ensures all elements are border-box */
+}
+
+html body {
+    min-height: 100vh;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    font-family: var(--bodyfont);
+    color: var(--heading);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--headerfont);
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    border-radius: 10rem;
+    height: auto;
+    padding: 1.25rem;
+    border: .25rem solid var(--mainBackground);
+    background-color: var(--background);
+    color: var(--heading);
+    font-family: var(--bodyfont);
+    font-size: 1.5rem;
+    font-weight: 800;
+    overflow: scroll;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: .1rem;
+}
+button {
+    padding: 1.25rem;
+    background-color: var(--background);
+    border: .25rem solid var(--mainBackground);
+    color: var(--heading);
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 10rem;
+}
+
+button:hover {
+    background-color: var(--hover);
+    color: var(--background);
+}
+
+#equals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
