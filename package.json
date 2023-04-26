@@ -1,4 +1,13 @@
 {
+  "name": "jquerycalculator",
+  "version": "1.0.0",
+  "description": "A simple calculator created using jQuery",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Mary Kohn",
+  "license": "ISC",
   "devDependencies": {
     "mocha": "^10.2.0"
   }
