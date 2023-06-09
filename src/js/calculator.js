@@ -13,6 +13,7 @@ $(document).ready(function() { // event listener, waiting for DOM to load
 
         display.val(currentInput); // sets the display to the new current input
     }
+    $('#buttons button').on('click', buttonClicked); //event listener to buttons, listens for a click
 
     function equalsClicked() {
         try {
@@ -24,6 +25,7 @@ $(document).ready(function() { // event listener, waiting for DOM to load
             currentInput = ''; // reset currentInput
         }
     }
-    $('#buttons button').on('click', buttonClicked); //event listener to buttons, listens for a click
     $('#equals').on('click', equalsClicked); // event listener for equal button
 });
+
+module.exports = 'calculator.js';
