@@ -1,6 +1,6 @@
 # jQulator
 
-A simple calculator web application built using jQuery for performing basic arithmetic operations.
+A calculator built using jQuery for performing basic arithmetic operations.
 
 ## Features
 
@@ -10,9 +10,11 @@ A simple calculator web application built using jQuery for performing basic arit
 - Division
 - Clear input
 
-## Live Demo
+## Demo
 
-[jQulator Website](https://marymkohn.github.io/jQuery-calculator/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1fb38938-3ea2-45cc-a0fd-187ca4b4ef7c/deploy-status)](https://app.netlify.com/sites/marjoriekohn-calculator/deploys)
+
+[calculator.marjoriekohn.com](https://calculator.marjoriekohn.com)
 
 ## Usage
 
@@ -26,44 +28,3 @@ This code provides the following functionality:
 3. Updates the calculator display based on user input.
 4. Evaluates the mathematical expression when the 'equals' button is clicked.
 5. Displays the result or an error message.
-
-
-## Code Explanation
-```javascript
-$(document).ready(function() { // event listener, waiting for DOM to load
-    let display = $('#display'); // <input> has id="display", note: display is READ ONLY
-    let currentInput = ''; // will be used to store user input
-
-    $('#buttons button').on('click', function() { //event listener to buttons, listens for a click
-        let buttonValue = $(this).text(); // retrieves the value of the button clicked
-
-        if (buttonValue === 'C') { // if user pushed clear
-            currentInput = ''; // resets currentInput
-        } else {
-            currentInput += buttonValue; // if not, the value to the currentInput
-        }
-
-        display.val(currentInput); // sets the display to the new current input
-    });
-
-    $('#equals').on('click', function() { // event listener for equal button
-        try {
-            let result = eval(currentInput); // evaluates the currentInput and stores it in 'result'
-            display.val(result); // sets the display to the result
-            currentInput = ''; // resets currentInput
-        } catch (e) { // if an exception is caught
-            display.val('Error'); // show 'Error' on the display
-            currentInput = ''; // reset currentInput
-        }
-    });
-});
-```
-
-## Contributing
-
-I welcome contributions to improve the jQulator. Please feel free to submit issues and pull requests.
-
-## License
-
-This project is licensed under the MIT License.
-
